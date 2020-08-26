@@ -31,8 +31,6 @@ def results(event):
     totalwords.set(f"Your typing speed was {len(var)} WPM (Words per minute)") 
     var2 = str(writing_text)
     var2.split()
-    # output_list = [li for li in difflib.ndiff(abc, xyz) if li[0] != ' ']
-    correct_words.set(f"Correct Words: {output_list}")
 
 if __name__ == "__main__":
     
