@@ -1,7 +1,6 @@
 # Importing the required libraries
 from tkinter import * 
 import sentences
-import difflib
 
 time_left = 10
 
@@ -20,9 +19,6 @@ def countdown():
         typingarea.destroy()
         wordCount = Label(textvariable=totalwords, font="comicsasms 10", pady=20)
         wordCount.pack(side=LEFT, anchor="nw")
-
-        correctwords = Label(textvariable=correct_words, font="comicsasms 10", pady=20,)
-        correctwords.pack(side=LEFT, anchor="sw")
 
 # Defining the function for counting words
 def results(event):
@@ -74,7 +70,6 @@ if __name__ == "__main__":
     typingarea.focus_set()
 
     scrollbar.config(command=writing_text.yview)
-    # scrollbar2.config(command=correctwords.xview)
 
     # Binding the events
     typingarea.bind("<KeyRelease>", results)
